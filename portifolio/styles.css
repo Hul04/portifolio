@@ -1,126 +1,254 @@
-/* Global Styles */
+/* Reset some basic styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-}
-
-.container {
-    width: 90%;
-    margin: auto;
-}
-
-/* Navbar */
-.navbar {
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  /* Navigation */
+  #desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #333;
-    padding: 15px 0;
-}
-
-.navbar .logo {
-    color: #fff;
-    font-size: 24px;
+    color: white;
+    padding: 1rem 2rem;
+  }
+  
+  #desktop-nav .logo {
+    font-size: 1.5rem;
     font-weight: bold;
-    text-transform: uppercase;
-}
-
-.navbar .nav-links {
-    list-style: none;
-    float: right;
-}
-
-.navbar .nav-links li {
-    display: inline;
+  }
+  
+  #desktop-nav .nav-links {
+    list-style-type: none;
+  }
+  
+  #desktop-nav .nav-links li {
+    display: inline-block;
     margin-left: 20px;
-}
-
-.navbar .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-}
-
-.navbar .nav-links a:hover {
-    background-color: #4CAF50;
-    border-radius: 5px;
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #f4f4f4;
-    padding: 50px 0;
-}
-
-.hero-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.hero-text {
-    max-width: 50%;
-}
-
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-image img {
-    width: 200px; /* Adjust size as needed */
-    height: 200px; /* Adjust size as needed */
-    border-radius: 50%; /* Circular photo */
-    border: 5px solid #4CAF50; /* Border color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    object-fit: cover; /* Maintain aspect ratio */
-}
-
-
-.btn {
-    background-color: #4CAF50;
+  }
+  
+  #desktop-nav .nav-links li a {
     color: white;
-    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
-}
-
-.btn:hover {
+    font-size: 1.1rem;
+  }
+  
+  #desktop-nav .nav-links li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hamburger Menu */
+  #hamburger-nav {
+    display: none;
+    justify-content: space-between;
+    padding: 1rem 2rem;
     background-color: #333;
-}
-
-/* About, Skills, Projects, Contact Sections */
-.about, .skills, .projects, .contact {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.skills-list {
+  }
+  
+  .hamburger-icon {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger-icon span {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin-bottom: 5px;
+    transition: all 0.3s;
+  }
+  
+  .menu-links {
+    display: none;
+  }
+  
+  .menu-links li {
+    margin-top: 10px;
+  }
+  
+  .menu-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  .menu-links li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Profile Section */
+  #profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+  }
+  
+  .section__pic-container img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .section__text {
+    max-width: 600px;
+  }
+  
+  .section__text .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .section__text__p1 {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .section__text__p2 {
+    font-size: 1.5rem;
+    color: #777;
+  }
+  
+  .btn-container {
+    margin-top: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-color-1 {
+    background-color: #333;
+    color: white;
+  }
+  
+  .btn-color-2 {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btn:hover {
+    opacity: 0.8;
+  }
+  
+  #socials-container .icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Sections */
+  section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .arrow {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  /* Experience & Projects Sections */
+  .experience-details-container,
+  .section-container {
+    display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-}
-
-.skill {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-}
+  }
+  
+  .about-containers {
+    width: 45%;
+  }
+  
+  .details-container {
+    background-color: white;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details-container h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+  
+  .article-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
+  }
+  
+  .project-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .project-title {
+    font-size: 1.3rem;
+    color: #333;
+    margin-top: 1rem;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    #desktop-nav {
+      display: none;
+    }
+  
+    #hamburger-nav {
+      display: flex;
+    }
+  
+    #profile {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .section__pic-container img {
+      margin-bottom: 2rem;
+    }
+  
+    .experience-details-container {
+      flex-direction: column;
+    }
+  
+    .about-containers {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .about-containers {
+      width: 100%;
+    }
+  }
+  
